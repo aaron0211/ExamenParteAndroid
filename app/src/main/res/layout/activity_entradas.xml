@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context=".EntradasActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:text="Resumen"
+        android:textSize="60dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/grey"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#ffd5d5d5">
+    </View>
+
+    <ImageView
+        android:id="@+id/resumenImagen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="32"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/resumenCine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:text="Cine"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/resumenTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:text="Titulo"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resumenFecha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Fecha"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/resumeHora"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Hora"
+            android:textSize="30dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resumenPrecio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Precio"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Total"
+            android:textSize="30dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/cantidad"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:inputType="number"
+            android:hint="Nº Entradas"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btAplicar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Aplicar"
+            android:textSize="25dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:textSize="30dp"
+        android:text="CONFIRMAR COMPRA"/>
+
+</LinearLayout>
