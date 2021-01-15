@@ -19,6 +19,7 @@ public class LstPeliculasCineActivity extends AppCompatActivity implements LstPe
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager lManager;
     private LstPeliculasCinePresenter lstPeliculasCinePresenter;
+    private String nombre,localidad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,8 @@ public class LstPeliculasCineActivity extends AppCompatActivity implements LstPe
 
         Intent i = this.getIntent();
         Bundle extra = i.getExtras();
-        String nombre = extra.getString("nombre");
+        nombre = extra.getString("nombre");
+        localidad = extra.getString("localidad");
 
         lstPeliculasCinePresenter = new LstPeliculasCinePresenter(this);
         lstPeliculasCinePresenter.getPeliculas(nombre);
@@ -40,7 +42,7 @@ public class LstPeliculasCineActivity extends AppCompatActivity implements LstPe
 
         lManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(lManager);
-        AdapterPeliCine adapter = new AdapterPeliCine(lstPeliculas);
+        AdapterPeliCine adapter = new AdapterPeliCine(lstPeliculas,nombre,localidad);
         recyclerView.setAdapter(adapter);
     }
 

@@ -19,7 +19,7 @@ public class FdPeliculaModel implements FdPeliculaContract.Model{
         this.onFdPeliculasListener = onFdPeliculasListener;
         HashMap<String,String> param = new HashMap<>();
         param.put("ACTION","PELICULA.PELICULA");
-        param.put("PELICULA",titulo);
+        param.put("TITULO",titulo);
         DatosAPI dapi = new DatosAPI(param);
         dapi.execute("http://192.168.18.7:8084/Android/Controller");
     }

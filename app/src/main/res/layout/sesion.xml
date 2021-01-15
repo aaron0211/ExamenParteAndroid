@@ -35,7 +35,7 @@
             android:layout_weight="40"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:gravity="center"
-            android:text="HORA"/>
+            android:text="FECHA"/>
 
         <TextView
             android:id="@+id/sesionHora"

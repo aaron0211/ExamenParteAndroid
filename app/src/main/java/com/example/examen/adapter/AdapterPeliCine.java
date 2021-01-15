@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.examen.EntradasActivity;
 import com.example.examen.peliculas.fdPelicula.FdPeliculaActivity;
 import com.example.examen.R;
 import com.example.examen.beans.Pelicula;
@@ -21,9 +22,12 @@ import java.util.ArrayList;
 
 public class AdapterPeliCine extends RecyclerView.Adapter<AdapterPeliCine.PeliCineViewHolder> {
     ArrayList<Pelicula> lstPeliculas;
+    private String nombre,localidad;
 
-    public AdapterPeliCine(ArrayList<Pelicula> lstPeliculas){
+    public AdapterPeliCine(ArrayList<Pelicula> lstPeliculas, String nombre, String localidad){
         this.lstPeliculas = lstPeliculas;
+        this.nombre = nombre;
+        this.localidad = localidad;
     }
 
     public static class PeliCineViewHolder extends RecyclerView.ViewHolder{
@@ -64,12 +68,13 @@ public class AdapterPeliCine extends RecyclerView.Adapter<AdapterPeliCine.PeliCi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), FdPeliculaActivity.class);
+                Intent i = new Intent(v.getContext(), EntradasActivity.class);
                 i.putExtra("titulo",pelicula.getTitulo());
+                i.putExtra("cine",nombre+"("+localidad+")");
                 i.putExtra("fecha",pelicula.getF_estreno());
-                i.putExtra("sinopsis",pelicula.getSinopsis());
-                i.putExtra("trailer",pelicula.getTrailer());
-                i.putExtra("imagen",pelicula.getUrl());
+                i.putExtra("hora",pelicula.getHora());
+                i.putExtra("precio",pelicula.getPrecio());
+                i.putExtra("url",pelicula.getUrl());
                 v.getContext().startActivity(i);
             }
         });

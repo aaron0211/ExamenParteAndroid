@@ -19,7 +19,8 @@ public class LstPeliculasGeneroModel implements LstPeliculasGeneroContract.Model
         this.onLstPeliculasGeneroListener = onLstPeliculasGeneroListener;
         HashMap<String,String> param = new HashMap<>();
         param.put("ACTION","PELICULA.FIND_ALL");
-        param.put("FILTRO","GENERO."+genero);
+        param.put("FILTRO","GENERO");
+        param.put("GENERO",genero);
         DatosAPI dapi = new DatosAPI(param);
         dapi.execute("http://192.168.18.7:8084/Android/Controller");
     }

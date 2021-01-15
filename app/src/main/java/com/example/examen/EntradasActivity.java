@@ -38,7 +38,7 @@ public class EntradasActivity extends AppCompatActivity {
         btAplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Integer.parseInt(cantidad.getText().toString())>1) {
+                if (Integer.parseInt(cantidad.getText().toString())>=1) {
                     float resultado = Float.parseFloat(intent.getStringExtra("precio")) * Integer.parseInt(cantidad.getText().toString());
                     total.setText("Total "+resultado+"€");
                     cantidad.setText("");

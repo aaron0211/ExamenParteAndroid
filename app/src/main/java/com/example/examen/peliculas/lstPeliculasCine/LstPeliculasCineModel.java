@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LstPeliculasCineModel implements LstPeliculasCineContract.Model{
-    //private String URL="";
     private ArrayList<Pelicula> lsArrayPeliculas;
     OnLstPeliculasCineListener onLstPeliculasCineListener;
 
@@ -20,23 +19,6 @@ public class LstPeliculasCineModel implements LstPeliculasCineContract.Model{
         this.onLstPeliculasCineListener = onLstPeliculasCineListener;
         HashMap<String, String> param = new HashMap<>();
         param.put("ACTION", "PELICULA.CINE");
-//        switch (nombre){
-//            case "Cervantes":
-//                URL = "https://jsonblob.com/api/4c5da603-5119-11eb-9b3f-b12ec5fa0f2f";
-//                break;
-//            case "Aragonia":
-//                URL = "https://jsonblob.com/api/27f015f3-5119-11eb-9b3f-f7904b7e9dc5";
-//                break;
-//            case "Grancasa":
-//                URL = "https://jsonblob.com/api/76c3d659-5119-11eb-9b3f-9b9afc672fb4";
-//                break;
-//            case "Maravillas":
-//                URL = "https://jsonblob.com/api/9518e179-5119-11eb-9b3f-e97e79cb484f";
-//                break;
-//            case "Cinemundo":
-//                URL = "https://jsonblob.com/api/b83c8c7b-5119-11eb-9b3f-cd11b02cd2cc";
-//                break;
-//        }
         param.put("CINE", nombre);
 
         DatosAPI dapi = new DatosAPI(param);
@@ -57,7 +39,6 @@ public class LstPeliculasCineModel implements LstPeliculasCineContract.Model{
             try {
                 Post post = new Post();
                 JSONArray lstPeliculas = post.getServerDataPost(parametros, url_select);
-                //JSONArray lstPeliculas = post.getServerDataGet(URL);
                 lsArrayPeliculas = Pelicula.getArrayListFromJSON(lstPeliculas);
             } catch (Exception e) {
                 e.printStackTrace();

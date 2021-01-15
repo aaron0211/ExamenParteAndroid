@@ -53,6 +53,7 @@ public class AdapterCine extends RecyclerView.Adapter<AdapterCine.CineViewHolder
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), LstPeliculasCineActivity.class);
                 i.putExtra("nombre",cine.getNombre());
+                i.putExtra("localidad",cine.getLocalidad());
                 v.getContext().startActivity(i);
             }
         });

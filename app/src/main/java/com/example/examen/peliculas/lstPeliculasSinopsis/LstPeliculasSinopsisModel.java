@@ -19,7 +19,12 @@ public class LstPeliculasSinopsisModel implements LstPeliculasSinopsisContract.M
         this.onLstPeliculasSinopsisListener = onLstPeliculasSinopsisListener;
         HashMap<String,String> param = new HashMap<>();
         param.put("ACTION","PELICULA.FIND_ALL");
-        param.put("FILTRO","SINOPSIS."+sinopsis);
+        param.put("FILTRO","SINOPSIS");
+        param.put("SINOPSIS",sinopsis);
+        //http://localhost:8084/Android/Controller?
+        // ACTION=PELICULA.FIND_ALL&
+        // FILTRO=SINOPSIS&
+        // SINOPSIS=GUERRA
         DatosAPI dapi = new DatosAPI(param);
         dapi.execute("http://192.168.18.7:8084/Android/Controller");
     }
