@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Examen"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EntradasActivity"></activity>
+        <activity android:name=".ResumenActivity"></activity>
+        <activity android:name=".EntradasActivity" />
         <activity android:name=".peliculas.lstPeliculasTOP.LstPeliculasTopActivity" />
         <activity android:name=".peliculas.lstPeliculasSinopsis.LstPeliculasSinopsisActivity" />
         <activity android:name=".peliculas.lstPeliculasGenero.LstPeliculasGeneroActivity" />
