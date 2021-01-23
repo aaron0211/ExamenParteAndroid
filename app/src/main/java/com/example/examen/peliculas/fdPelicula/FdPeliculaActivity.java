@@ -60,7 +60,7 @@ public class FdPeliculaActivity extends AppCompatActivity implements FdPeliculaC
         Picasso.get().load(intent.getStringExtra("imagen")).into(imagen);
 
         fdPeliculaPresenter = new FdPeliculaPresenter(this);
-        fdPeliculaPresenter.getPeliculas(intent.getStringExtra("titulo"));
+        fdPeliculaPresenter.getSesiones(intent.getStringExtra("titulo"));
 
         youtube.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
@@ -78,7 +78,6 @@ public class FdPeliculaActivity extends AppCompatActivity implements FdPeliculaC
 
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
-
 
         AdapterSesion adapter = new AdapterSesion(peliculas);
         recycler.setAdapter(adapter);

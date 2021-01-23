@@ -15,7 +15,7 @@ public class FdPeliculaModel implements FdPeliculaContract.Model{
     OnFdPeliculasListener onFdPeliculasListener;
 
     @Override
-    public void getPeliculasWS(OnFdPeliculasListener onFdPeliculasListener, String titulo) {
+    public void getSesionesWS(OnFdPeliculasListener onFdPeliculasListener, String titulo) {
         this.onFdPeliculasListener = onFdPeliculasListener;
         HashMap<String,String> param = new HashMap<>();
         param.put("ACTION","PELICULA.PELICULA");

@@ -44,9 +44,7 @@ public class LoginUserModel implements LoginUserContract.Model {
             String url_select = strings[0];
             try {
                 Post post = new Post();
-                System.out.println(url_select+parametros);
                 JSONArray lstUsuarios = post.getServerDataPost(parametros, url_select);
-                //JSONArray lstUsuarios = post.getServerDataGet(URL);
                 lstArrayUsuarios = Usuario.getArrayListFromJSON(lstUsuarios);
             } catch (Exception e) {
                 e.printStackTrace();

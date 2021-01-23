@@ -11,10 +11,10 @@ public interface FdPeliculaContract {
         void error(String message);
     }
     interface Presenter{
-        void getPeliculas(String titulo);
+        void getSesiones(String titulo);
     }
     interface Model{
-        void getPeliculasWS(OnFdPeliculasListener onFdPeliculasListener, String titulo);
+        void getSesionesWS(OnFdPeliculasListener onFdPeliculasListener, String titulo);
 
         interface OnFdPeliculasListener{
             void resolve(ArrayList<Pelicula> peliculas);

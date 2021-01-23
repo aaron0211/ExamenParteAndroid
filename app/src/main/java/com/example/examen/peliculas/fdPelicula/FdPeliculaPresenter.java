@@ -14,8 +14,8 @@ public class FdPeliculaPresenter  implements FdPeliculaContract.Presenter{
     }
 
     @Override
-    public void getPeliculas(String titulo) {
-        fdPeliculaModel.getPeliculasWS(new FdPeliculaContract.Model.OnFdPeliculasListener() {
+    public void getSesiones(String titulo) {
+        fdPeliculaModel.getSesionesWS(new FdPeliculaContract.Model.OnFdPeliculasListener() {
             @Override
             public void resolve(ArrayList<Pelicula> peliculas) {
                 view.success(peliculas);
